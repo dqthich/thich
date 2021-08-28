@@ -1,0 +1,456 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link href="vendor/bootstrap/css/bootstrap.min.css" type="text/css" rel="stylesheet" />
+    <!-- Font awesome -->
+    <link rel="stylesheet" href="vendor/font-awesome/css/font-awesome.min.css" type="text/css">
+    <!-- Custom css - Các file css do chúng ta tự viết -->
+    <link rel="stylesheet" href="assets/css/app.css" type="text/css">
+    <style>
+      
+    </style>
+</head>
+
+<body>
+  <div class= "container-fluid new">
+    <div class="row">
+      <div class="col-md-5 logo">
+      <img src="assets/img/marketing/logo4.PNG"  class="img-fluid" style="width: 170px;height: 170px;" />
+
+      </div>
+      <div class="col-md-7">
+        <p class="new3">
+        
+        <i class="fa fa-volume-control-phone " style="color:  #007bff; font-size:20px;"aria-hidden="true"></i> <span style="color:#007bff ">Hotline:</span> <a href="#" style="color: black;">(024) 72 699 9966</a>
+        </p><br/>
+        <p  class="new4">
+        <marquee scrollamount = "8"; direction ="left">
+        Số 52 333N/6 Tổ 6 khu vực 5 đường Nguyễn Văn Linh phường An Khánh quận Ninh Kiều thành phố Cần Thơ  </marquee> 
+        </p>
+       
+      </div>
+    </div>
+  </div>
+  <div class= "container-fluid new">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark " >
+           <//img src="assets/img/marketing/logo1.PNG" class="img-fluid" style="width: 300px; height:50px;" />
+            <ul class="navbar-nav mr-auto ">
+                <li class="nav-item active new1">
+                    <a class="nav-link" href="admin.php">ADMIN<span class="sr-only">(current)</span></a>
+                </li>
+                <li class="nav-item new1">
+                    <a class="nav-link" href="#">Quản lí tour</a>
+                </li>
+                <li class="nav-item new1">
+                    <a class="nav-link" href="#">Quản lí nhân viên</a>
+                </li>
+                <li class="nav-item new1">
+                    <a class="nav-link" href="#">Xác nhận tour</a>
+                </li>
+
+                
+                
+            </ul>
+
+        </nav>
+</div>
+
+  
+    <br />
+
+    
+
+    
+            
+    <div class="container" style="padding-top: 30px;">
+        <div style="background-image:url(assets/img/product/nhatrang.jpg); padding-top: 15px; height: 800px;">
+            <form name="frmdangky" id="frmdangky" action="dangkynv.php" method="POST" onsubmit="return thongbao2()" >
+                <div class="container mt-4">
+                    <div class="row justify-content-center">
+                        <div class="col-md-6">
+                            <div class="card mx-4">
+                                <div class="card-body p-4">
+                                    <h1>Đăng ký</h1>
+                                    <p class="text-muted">Tạo tài khoản nhân viên</p>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                                <i class="fa fa-user"></i>
+                                            </span>
+                                        </div>
+                                        <input class="form-control" type="text" required placeholder="Tên tài khoản"
+                                            name="nv_tendangnhap"/>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                              <i class="fa fa-key" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <input class="form-control" type="password" required placeholder="Mật khẩu"
+                                            name="nv_matkhau"/>
+                                    </div>
+                                    
+                                    
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                              <i class="fa fa-location-arrow" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <input class="form-control" type="text" required placeholder="Địa chỉ" name="nv_diachi"/>
+                                    </div>
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                              <i class="fa fa-id-badge" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <select class="form-control" name="nv_cv" id="nv_cv">
+                                            <option value="hdv">Hướng dẫn viên</option>
+                                            <option value="ad">Admin</option>
+                                            <option value="nv">Nhân viên hành chính</option>
+                                        </select>
+                                        <!-- <input class="form-control" type="text" required placeholder="Mã chức vụ" name="nv_cv"/> -->
+                                    </div>
+
+                                    <div class="input-group mb-3">
+                                        <div class="input-group-prepend">
+                                            <span class="input-group-text">
+                                              <i class="fa fa-phone-square" aria-hidden="true"></i>
+                                            </span>
+                                        </div>
+                                        <input class="form-control" type="tel" pattern="[0-9]{8-12}" required placeholder="Điện thoại"
+                                            name="nv_dienthoai" id ="nv_dienthoai"/>
+                                    </div>
+                                    
+                                    
+                                    
+                                    <button class="btn btn-block btn-success" type="submit" name="btnDangKynv">Tạo tài khoản</button>
+                                    
+                                </div>
+                                <div class="card-footer p-4">
+                                    <div class="row">
+                                        <div class="col-12">
+                                            <center>Nếu bạn đã có Tài khoản, xin mời Đăng nhập</center>
+                                            <a class="btn btn-primary form-control"
+                                                href="dangnhapnv.html">Đăng nhập</a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+
+
+
+
+    
+
+   
+    <!--
+    <script>
+      function thongbao2(){
+        var sdt = document.getElementById("nv_dienthoai").value;
+        if(sdt == 123456789 || sdt == 0855011878 || sdt == 0852511092 || sdt== 0949298465){
+          alert("Đã tồn tại số điện thoại !!");
+        }else{
+        alert("Bạn đã đăng ký tài khoản thành công !!");
+        return true;
+        }
+      }
+  
+  
+    </script>-->
+    
+
+           
+    
+
+
+
+
+
+
+    
+    <!-- Footer -->
+<footer class="page-footer font-small unique-color-dark">
+
+<div style="background-color: #6351ce;">
+  <div class="container">
+
+    <!-- Grid row-->
+    <div class="row py-4 d-flex align-items-center">
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-5 text-center text-md-left mb-4 mb-md-0">
+        <h6 class="mb-0" style="color: white; font-family: Time New Roman; font-size: 20px; text-shadow: 20%;">Hãy liên hệ với chúng tôi </h6>
+      </div>
+      <!-- Grid column -->
+
+      <!-- Grid column -->
+      <div class="col-md-6 col-lg-7 text-center text-md-right lienhe">
+
+        <!-- Facebook -->
+        <a href="#"class="fb-ic">
+        <i class="fa fa-facebook-square" aria-hidden="true"></i>
+        </a>&nbsp;
+        <!-- Twitter -->
+        <a href="#" class="tw-ic">
+        <i class="fa fa-twitter-square" aria-hidden="true"></i>
+        </a>&nbsp;
+        <!-- Google +-->
+        <a href="#" class="gplus-ic">
+        <i class="fa fa-google-plus" aria-hidden="true"></i>
+        </a>&nbsp;
+        <!--Linkedin -->
+        <a  href="#" class="li-ic">
+        <i class="fa fa-linkedin" aria-hidden="true"></i>
+        </a>&nbsp;
+        <!--Instagram-->
+        <a  href="#" class="ins-ic">
+        <i class="fa fa-instagram" aria-hidden="true"></i>
+        </a>
+
+      </div>
+      <!-- Grid column -->
+
+    </div>
+    <!-- Grid row-->
+
+  </div>
+</div>
+
+<!-- Footer Links -->
+<div class="container text-center text-md-left mt-5">
+
+  <!-- Grid row -->
+  <div class="row mt-3">
+
+    <!-- Grid column -->
+    <div class="col-md-3 col-lg-4 col-xl-3 mx-auto mb-4">
+
+      <!-- Content -->
+      <h6 class="text-uppercase font-weight-bold">WEBTRAVEL-GIẢI PHÁP BÁN TOUR DỄ DÀNG</h6>
+                <p class="footer">
+                    <a href="#"><i class="fa fa-map-marker" aria-hidden="true"></i>&nbsp;Nguyễn Văn Linh-An Khánh-Ninh Kiều-Cần Thơ</a><br />
+                    <a href="#"><i class="fa fa-phone-square" aria-hidden="true"> </i>&nbsp;Liên hê: 0855663797</a><br />
+                    <a href="#"><i class="fa fa-envelope" aria-hidden="true"> </i>&nbsp;quocthich12345@gmail.com</a><br />
+                    
+                </p>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mb-4">
+
+      <!-- Links -->
+      <h6 class="text-uppercase font-weight-bold">VỀ CHÚNG TÔI</h6>
+    
+                    <p  class="footer">
+                        <a href="#">Đối tác đồng hành</a><br />
+                        <a href="#">Phong cách QT TRAVEL</a><br />
+                        <a href="#">Blog</a><br />
+                        <a href="#">Tuyển dụng</a><br />
+                        <a href="#">Chính sách bảo mật</a><br />
+                        <a href="#">Bảo hiểm du lịch</a>
+
+
+                    </p>
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mb-4">
+
+      <!-- Links -->
+      <h6 class="text-uppercase font-weight-bold">GÓC KHÁCH HÀNG</h6>
+      <p  class="footer">
+        <a href="#">Chính sách đặt tour</a> <br />
+        <a href="#">Chính sách bảo mật</a><br />
+        <a href="#">Ý kiến khách hàng</a><br />
+        <a href="#">Phiếu góp ý</a>
+
+        </p>
+
+    </div>
+    <!-- Grid column -->
+
+    <!-- Grid column -->
+    <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mb-md-0 mb-4">
+
+      <!-- Links -->
+      <h6 class="text-uppercase font-weight-bold">THANH TOÁN</h6>
+      <p  class="footer">
+      <a href="#"><i class="fa fa-cc-visa" aria-hidden="true"></i> Thẻ visa</a><br/>
+      
+      <a href="#"><i class="fa fa-cc-jcb" aria-hidden="true"></i> Thẻ jcb</a><br/>
+      
+      <a href="#"><i class="fa fa-cc-mastercard" aria-hidden="true"></i> Master card</a><br/>
+      
+      <a href="#"><i class="fa fa-credit-card-alt" aria-hidden="true"></i> Credit card</a><br/>
+      <a href="#"><i class="fa fa-money" aria-hidden="true"></i> Thanh toán tiền mặt</a>
+    </p>
+
+    </div>
+    <!-- Grid column -->
+
+  </div>
+  <!-- Grid row -->
+
+</div>
+<!-- Footer Links -->
+
+<!-- Copyright -->
+
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+ <!-- Footer -->
+<footer class="page-footer font-small mdb-color lighten-3 pt-4">
+
+<!-- Footer Elements -->
+<div class="container-liquid" >
+
+  <!--Grid row-->
+  <div class="row">
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-12 mb-4">
+
+      <!--Image-->
+      <div class="view overlay z-depth-1-half">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(73).jpg" class="img-fluid"
+          alt="">
+        <a href="">
+          <div class="mask rgba-white-light"></div>
+        </a>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4">
+
+      <!--Image-->
+      <div class="view overlay z-depth-1-half">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(78).jpg" class="img-fluid"
+          alt="">
+        <a href="">
+          <div class="mask rgba-white-light"></div>
+        </a>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4">
+
+      <!--Image-->
+      <div class="view overlay z-depth-1-half">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(79).jpg" class="img-fluid"
+          alt="">
+        <a href="">
+          <div class="mask rgba-white-light"></div>
+        </a>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-12 mb-4">
+
+      <!--Image-->
+      <div class="view overlay z-depth-1-half">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(81).jpg" class="img-fluid"
+          alt="">
+        <a href="">
+          <div class="mask rgba-white-light"></div>
+        </a>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4">
+
+      <!--Image-->
+      <div class="view overlay z-depth-1-half">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(82).jpg" class="img-fluid"
+          alt="">
+        <a href="">
+          <div class="mask rgba-white-light"></div>
+        </a>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+    <!--Grid column-->
+    <div class="col-lg-2 col-md-6 mb-4">
+
+      <!--Image-->
+      <div class="view overlay z-depth-1-half">
+        <img src="https://mdbootstrap.com/img/Photos/Horizontal/Nature/4-col/img%20(84).jpg" class="img-fluid"
+          alt="">
+        <a href="">
+          <div class="mask rgba-white-light"></div>
+        </a>
+      </div>
+
+    </div>
+    <!--Grid column-->
+
+  </div>
+  <!--Grid row-->
+
+</div>
+<!-- Footer Elements -->
+
+<!-- Copyright -->
+<div class="footer-copyright text-center py-3">© 2020 Copyright:
+  <a href="https://mdbootstrap.com/"> QTTravel.com</a>
+</div>
+<!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+
+
+
+
+
+    <!-- Liên kết Jquery -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <!-- Liên kết PopperJS -->
+    <script src="vendor/popperjs/popper.min.js"></script>
+    <!-- Liên kết Bootstrap -->
+    <script src="vendor/bootstrap/js/bootstrap.js"></script>
+    <!-- Custom script - Các file js do mình tự viết -->
+    <script src="assets/js/app.js"></script>
+
+
+</body>
+
+</html>
